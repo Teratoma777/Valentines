@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! Valentine's Day!</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Solid background color (dark blue) */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3d; /* Dark blue solid color */
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            /* Flexbox for centering */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling for the celebration text */
+        #celebration {
+            font-size: 48px;
+            margin-bottom: 20px;
+            z-index: 1; /* Ensure text is on top */
+        }
+
+        /* Styling for the subtext */
+        #subtext {
+            font-size: 24px;
+            margin-bottom: 40px;
+            z-index: 1;
+        }
+
+        /* Confetti animation */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4; /* Pink color */
+            animation: confetti-fall 5s infinite;
+            z-index: 0;
+        }
+
+        /* Confetti animation keyframes */
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Random positioning for confetti */
+        .confetti:nth-child(1) { left: 10%; animation-duration: 3s; }
+        .confetti:nth-child(2) { left: 20%; animation-duration: 5s; }
+        .confetti:nth-child(3) { left: 30%; animation-duration: 4s; }
+        .confetti:nth-child(4) { left: 40%; animation-duration: 6s; }
+        .confetti:nth-child(5) { left: 50%; animation-duration: 3.5s; }
+        .confetti:nth-child(6) { left: 60%; animation-duration: 4.5s; }
+        .confetti:nth-child(7) { left: 70%; animation-duration: 5.5s; }
+        .confetti:nth-child(8) { left: 80%; animation-duration: 4s; }
+        .confetti:nth-child(9) { left: 90%; animation-duration: 6s; }
+        .confetti:nth-child(10) { left: 100%; animation-duration: 3s; }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #celebration {
+                font-size: 36px;
+            }
+            #subtext {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti animation -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <!-- Celebration message -->
+    <div id="celebration">Good Girl <3 </div>
+    <div id="subtext">💖</div>
+
+    <script>
+        // Optional: Add more interactivity or animations here
+    </script>
+</body>
+</html>
